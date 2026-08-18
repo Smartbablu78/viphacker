@@ -332,7 +332,7 @@ h1 {
 
 .vip-arrow {
     position: relative;
-       margin-bottom: 5px;
+       margin-bottom: 8px;
     z-index: 2;
 }
 
@@ -358,7 +358,7 @@ h1 {
 }
 
 .vip-btn .vip-arrow {
-    margin-bottom: 5px;
+    margin-top: 3px;
 }
 
 /* ==========================================
