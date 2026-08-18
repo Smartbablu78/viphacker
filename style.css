@@ -181,6 +181,7 @@ h1 {
 .arrow {
     font-size: 21px;
     margin-left: 4px;
+    margin-bottom: 5px;
     transition: transform 0.2s ease;
 }
 
@@ -332,7 +333,6 @@ h1 {
 
 .vip-arrow {
     position: relative;
-       margin-bottom: 4px;
     z-index: 2;
 }
 
@@ -358,7 +358,7 @@ h1 {
 }
 
 .vip-btn .vip-arrow {
-    margin-top: 4px;
+    margin-top: 7px;
 }
 
 /* ==========================================
