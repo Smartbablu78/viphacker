@@ -2,7 +2,7 @@
 // TELEGRAM CHANNEL LINK
 // ==========================================
 
-const TELEGRAM_LINK = "https://t.me/YOUR_CHANNEL";
+const TELEGRAM_LINK = "https://t.me/+Su0s0eRnPj81NGFl";
 
 
 // ==========================================
