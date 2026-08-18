@@ -181,6 +181,7 @@ h1 {
 .arrow {
     font-size: 21px;
     margin-left: 4px;
+    margin-bottom: 10px;
     transition: transform 0.2s ease;
 }
 
