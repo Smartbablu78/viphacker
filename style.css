@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(0, 136, 204, 0.20), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(90, 70, 200, 0.18), transparent 30%),
+        linear-gradient(135deg, #07111f, #0b1728 50%, #101a2d);
+
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page::before,
+.page::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+.page::before {
+    width: 260px;
+    height: 260px;
+    background: rgba(0, 136, 204, 0.10);
+    top: -80px;
+    left: -80px;
+}
+
+.page::after {
+    width: 300px;
+    height: 300px;
+    background: rgba(98, 80, 220, 0.10);
+    bottom: -100px;
+    right: -100px;
+}
+
+.card {
+    width: 100%;
+    max-width: 460px;
+    padding: 42px 32px 35px;
+    text-align: center;
+
+    background: rgba(15, 27, 45, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 26px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.40),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    position: relative;
+    z-index: 2;
+}
+
+.telegram-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: linear-gradient(145deg, #19aee5, #087eb9);
+
+    font-size: 34px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 136, 204, 0.28),
+        inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+.badge {
+    display: inline-block;
+    padding: 7px 13px;
+    margin-bottom: 16px;
+
+    border-radius: 30px;
+    background: rgba(0, 136, 204, 0.12);
+    border: 1px solid rgba(0, 170, 230, 0.20);
+
+    color: #55c7f3;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+h1 {
+    font-size: 31px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.description {
+    color: #aebaca;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.telegram-btn {
+    width: 100%;
+    min-height: 60px;
+    border: none;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background: linear-gradient(135deg, #0b9cda, #087fc0);
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(0, 136, 204, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+.telegram-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 14px 30px rgba(0, 136, 204, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.telegram-btn:active {
+    transform: translateY(0);
+}
+
+.telegram-logo {
+    font-size: 20px;
+     margin-bottom: 3px;
+}
+
+.arrow {
+    font-size: 21px;
+    margin-left: 4px;
+    transition: transform 0.2s ease;
+}
+
+.telegram-btn:hover .arrow {
+    transform: translateX(4px);
+}
+
+.secure-text {
+    margin-top: 24px;
+    color: #7f8d9e;
+    font-size: 12px;
+}
+
+.secure-text span {
+    color: #28c76f;
+    font-size: 9px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+@media (max-width: 480px) {
+
+    .page {
+        padding: 18px;
+    }
+
+    .card {
+        padding: 34px 22px 30px;
+        border-radius: 22px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .telegram-btn {
+        min-height: 57px;
+        font-size: 15px;
+    }
+}
+
+/* ==========================================
+   VIP LIVE TELEGRAM BUTTON
+========================================== */
+
+.vip-btn {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #ff7a18,
+        #ff3d00,
+        #d91e00
+    );
+
+    border: 1px solid rgba(255, 190, 80, 0.45);
+
+    box-shadow:
+        0 10px 30px rgba(255, 70, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.20);
+
+    animation: vipPulse 2s infinite;
+}
+
+
+/* Moving shine effect */
+
+.vip-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.22),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    animation: shineEffect 3s infinite;
+}
+
+
+/* VIP content */
+
+.vip-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* LIVE badge */
+
+.live-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+
+    background: rgba(255, 255, 255, 0.18);
+    padding: 3px 7px;
+    border-radius: 20px;
+
+    backdrop-filter: blur(5px);
+}
+
+
+/* Live red dot */
+
+.live-dot {
+    width: 6px;
+    height: 6px;
+
+    background: #ffffff;
+    border-radius: 50%;
+
+    animation: liveDot 1s infinite;
+}
+
+
+/* VIP text */
+
+.vip-text {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+/* VIP arrow */
+
+.vip-arrow {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* jdhdeh */
+
+.vip-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vip-btn .telegram-logo {
+    margin-top: 13px;
+}
+
+.vip-btn .vip-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.vip-btn .vip-arrow {
+    margin-top: 15px;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes vipPulse {
+
+    0% {
+        box-shadow:
+            0 10px 30px rgba(255, 70, 0, 0.25),
+            inset 0 1px 0 rgba(255, 255, 255, 0.20);
+    }
+
+    50% {
+        box-shadow:
+            0 12px 38px rgba(255, 70, 0, 0.45),
+            inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+
+    100% {
+        box-shadow:
+            0 10px 30px rgba(255, 70, 0, 0.25),
+            inset 0 1px 0 rgba(255, 255, 255, 0.20);
+    }
+}
+
+
+@keyframes shineEffect {
+
+    0% {
+        left: -120%;
+    }
+
+    45% {
+        left: 140%;
+    }
+
+    100% {
+        left: 140%;
+    }
+}
+
+
+@keyframes fireBounce {
+
+    from {
+        transform: translateY(1px) scale(1);
+    }
+
+    to {
+        transform: translateY(-2px) scale(1.12);
+    }
+}
+
+
+@keyframes liveDot {
+
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.35;
+        transform: scale(0.65);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
