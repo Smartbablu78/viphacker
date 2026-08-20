@@ -432,3 +432,61 @@ h1 {
         transform: scale(1);
     }
 }
+
+.redirect-message {
+    margin-top: 22px;
+    text-align: center;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.6;
+
+    color: #aebaca;
+
+    animation: redirectGlow 2s ease-in-out infinite;
+}
+
+.redirect-message strong {
+    display: inline-block;
+    margin: 0 4px;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    background: linear-gradient(
+        90deg,
+        #00c6ff,
+        #7c5cff,
+        #ff4ecd,
+        #00c6ff
+    );
+
+    background-size: 250% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: countdownGradient 2s linear infinite;
+}
+
+@keyframes countdownGradient {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 250% center;
+    }
+}
+
+@keyframes redirectGlow {
+    0%,
+    100% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
