@@ -35,9 +35,9 @@ const redirectTimer = setInterval(function () {
 function joinTelegram() {
 
     // Meta Pixel Subscribe Event
-    if (typeof fbq === "function") {
-        fbq("track", "Subscribe");
-    }
+    // if (typeof fbq === "function") {
+    //     fbq("track", "Subscribe");
+    // }
 
     // Open Telegram
     window.location.href = TELEGRAM_LINK;
