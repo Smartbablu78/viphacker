@@ -7,7 +7,7 @@ const TELEGRAM_LINK = "https://t.me/+Su0s0eRnPj81NGFl";
 // 10 SECOND AUTO REDIRECT
 // ==========================================
 
-let secondsLeft = 10;
+let secondsLeft = 17;
 
 const countdownElement = document.getElementById("countdown");
 
